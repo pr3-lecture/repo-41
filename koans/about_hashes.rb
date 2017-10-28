@@ -47,15 +47,15 @@ class AboutHashes < Neo::Koan
     hash1 = { :one => "uno", :two => "dos" }
     hash2 = { :two => "dos", :one => "uno" }
 
-    assert_equal __, hash1 == hash2
+    assert_equal true, hash1 == hash2
   end
 
   def test_hash_keys
     hash = { :one => "uno", :two => "dos" }
-    assert_equal __, hash.keys.size
-    assert_equal __, hash.keys.include?(:one)
-    assert_equal __, hash.keys.include?(:two)
-    assert_equal __, hash.keys.class
+    assert_equal 2, hash.keys.size
+    assert_equal true, hash.keys.include?(:one)
+    assert_equal true, hash.keys.include?(:two)
+    assert_equal Hash, hash.keys.class
   end
 
   def test_hash_values
