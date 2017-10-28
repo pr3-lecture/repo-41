@@ -10,7 +10,7 @@ class AboutHashes < Neo::Koan
 
   def test_hash_literals
     hash = { :one => "uno", :two => "dos" }
-    assert_equal __, hash.size
+    assert_equal 2, hash.size
   end
 
   def test_accessing_hashes
