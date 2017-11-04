@@ -96,9 +96,10 @@ EOS
     hi = original_string
     there = "World"
     hi << there
-    assert_equal __, original_string
+    assert_equal "Hello, World", original_string
 
     # THINK ABOUT IT:
+    # << is a operation on the same object, while += creates a new one
     #
     # Ruby programmers tend to favor the shovel operator (<<) over the
     # plus equals operator (+=) when building up strings.  Why?
