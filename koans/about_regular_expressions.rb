@@ -64,13 +64,13 @@ class AboutRegularExpressions < Neo::Koan
   end
 
   def test_slash_s_is_a_shortcut_for_a_whitespace_character_class
-    assert_equal " ", "space: \t\n"[/\s+/]
+    assert_equal " \t\n", "space: \t\n"[/\s+/]
   end
 
   def test_slash_w_is_a_shortcut_for_a_word_character_class
     # NOTE:  This is more like how a programmer might define a word.
-    assert_equal __, "variable_1 = 42"[/[a-zA-Z0-9_]+/]
-    assert_equal __, "variable_1 = 42"[/\w+/]
+    assert_equal "variable_1", "variable_1 = 42"[/[a-zA-Z0-9_]+/]
+    assert_equal "variable_1", "variable_1 = 42"[/\w+/]
   end
 
   def test_period_is_a_shortcut_for_any_non_newline_character
