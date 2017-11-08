@@ -110,7 +110,7 @@ class AboutRegularExpressions < Neo::Koan
   end
 
   def test_slash_b_anchors_to_a_word_boundary
-    assert_equal __, "bovine vines"[/\bvine./]
+    assert_equal "vines", "bovine vines"[/\bvine./]
   end
 
   # ------------------------------------------------------------------
