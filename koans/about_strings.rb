@@ -153,17 +153,17 @@ EOS
 
   in_ruby_version("1.8") do
     def test_in_older_ruby_single_characters_are_represented_by_integers
-      assert_equal __, ?a
-      assert_equal __, ?a == 97
+      assert_equal 97, ?a
+      assert_equal true, ?a == 97
 
-      assert_equal __, ?b == (?a + 1)
+      assert_equal true, ?b == (?a + 1)
     end
   end
 
   in_ruby_version("1.9", "2") do
     def test_in_modern_ruby_single_characters_are_represented_by_strings
-      assert_equal __, ?a
-      assert_equal __, ?a == 97
+      assert_equal "a", ?a
+      assert_equal false, ?a == 97
     end
   end
 
