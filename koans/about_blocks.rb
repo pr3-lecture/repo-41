@@ -24,7 +24,7 @@ class AboutBlocks < Neo::Koan
 
   def test_blocks_can_take_arguments
     method_with_block_arguments do |argument|
-      assert_equal __, argument
+      assert_equal "Jim", argument
     end
   end
 
