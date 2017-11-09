@@ -11,7 +11,7 @@ class AboutConstants < Neo::Koan
   end
 
   def test_top_level_constants_are_referenced_by_double_colons
-    assert_equal "nested", ::C
+    assert_equal "top level", ::C
   end
 
   def test_nested_constants_are_referenced_by_their_complete_path
