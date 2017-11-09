@@ -88,7 +88,7 @@ class AboutMethods < Neo::Koan
   end
 
   def test_method_without_explicit_return
-    assert_equal __, method_without_explicit_return
+    assert_equal :return_value, method_without_explicit_return
   end
 
   # ------------------------------------------------------------------
