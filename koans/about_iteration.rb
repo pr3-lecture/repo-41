@@ -50,7 +50,7 @@ class AboutIteration < Neo::Koan
       break if item > 3
       sum += item
     end
-    assert_equal __, sum
+    assert_equal 6, sum
   end
 
   def test_collect_transforms_elements_of_an_array
