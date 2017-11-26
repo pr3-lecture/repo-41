@@ -1,0 +1,5 @@
+(defun fak (n)
+  	(cond ((<= n 2) n)
+	      ((> n 2) (* n (fak (- n 1))))
+	)
+)

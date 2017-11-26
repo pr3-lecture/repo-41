@@ -1,0 +1,5 @@
+(defun index (li ele) 
+  (cond ((or (null li)(< ele 0)) li)
+	((= ele 0)(car li))
+	((> ele 0)(index (cdr li)(- ele 1))) 
+  ))	
