@@ -47,3 +47,18 @@
         ((atom tree) tree)
         ((null (cadr tree)) (car tree))
         ((not(null (cadr tree)))(getMin (cadr tree)))))
+; removes val from tree
+(defun myremove(tree node)
+  (cond ((not(contains tree node)) nil)
+        ; der zustand vor dem finden
+        ((and (atom tree)(= tree node)) nil) 
+        ; Fall das eltern knoten zurück kommt
+        ((= (car tree) node) (list (getMin (caddr tree))(cadr tree)(hilfsRemove (caddr tree) (getMin (caddr tree)))))
+        ((> (car tree) node) (list (car tree)(myremove (cadr tree) node)(caddr tree)))
+        ((< (car tree) node) (list (car tree)(cadr tree)(myremove (caddr tree) node)))))
+;hilfsfunktion remove
+(defun hilfsRemove(tree node)
+  (cond ((atom tree) nil)
+        ((= (car tree) node) (list (caddr tree)))
+        ((> (car tree) node) (hilfsRemove(cadr tree) node))
+        ((< (car tree) node) (hilfsRemove(caddr tree) node))))
